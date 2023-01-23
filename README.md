@@ -11,7 +11,7 @@
 - [express](https://www.npmjs.com/package/express) : Web framework for Node.js.
 - [express-async-handler](https://www.npmjs.com/package/express-async-handler) : Middleware for handling exceptions inside of async express routes and passing them to your express error handlers.
 - [express-fileupload](https://www.npmjs.com/package/express-fileupload) : Simple express middleware for uploading files..
-- [jsonwebtoken](https://www.npmjs.com/package/express-fileupload) : Simple express middleware for uploading files.
+- [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) : An implementation of JSON Web Tokens.
 - [mongoose](https://www.npmjs.com/package/mongoose) : Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.
 - [nodemailer](https://www.npmjs.com/package/nodemailer) : Send emails from Node.js.
 - [slugify](https://www.npmjs.com/package/slugify) : To convert string characters to slug format

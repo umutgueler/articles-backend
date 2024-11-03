@@ -108,7 +108,7 @@ const forgotPassword = asyncErrorWrapper(async (req, res, next) => {
     const resetPasswordUrl = `http://localhost:6660/auth/resetpassword?resetPasswordToken=${resetPasswordToken}`;
 
     const emailTemplate = `
-        <h1>YKFKT</h1>
+        <h1>ARTICLES</h1>
         <h3>Reset Your Passwor</h3>
         <p>This<a href="${resetPasswordUrl}" target="_blank">link</a> will expire in one hour.</p>
     `;
@@ -167,7 +167,6 @@ const resetPassword = asyncErrorWrapper(async (req, res, next) => {
     return res
         .status(200)
         .json({
-            loves: "Ykfkt",
             message: "Reset Password Successful"
         })
 })

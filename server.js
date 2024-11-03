@@ -17,7 +17,7 @@ const cloudinary = require('cloudinary').v2;
 
 //Environtmen Variables
 dotenv.config({
-    path: "./config.env"
+    path: "./.env"
 });
 const { CLOUD_NAME, CLOUD_API_KEY, CLOUD_API_SECRET, NODE_ENV } = process.env;
 cloudinary.config({
@@ -30,13 +30,9 @@ cloudinary.config({
 
 connectDatabase();
 
-const origin = NODE_ENV === "development" ? "http://localhost:6600" : "https://gulerumut.github.io";
+const origin = NODE_ENV === "development" ? "http://localhost:6600" : "https://articles-gold.vercel.app";
 const app = express();
-app.use(cors(
-    {
-        origin:"https://articles-gold.vercel.app"
-    }
-))
+app.use(cors({ origin }))
 
 
 

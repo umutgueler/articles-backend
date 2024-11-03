@@ -1,7 +1,7 @@
 const mongosee = require("mongoose");
 
 const connectDatabase = () => {
-    mongosee.connect(process.env.MONGO_URL)
+    mongosee.connect(process.env.MONGO_URL,{dbName:'articles'})
     .then(()=>{
         
     })

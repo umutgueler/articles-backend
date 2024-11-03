@@ -19,7 +19,7 @@ const cloudinary = require('cloudinary').v2;
 dotenv.config({
     path: "./.env"
 });
-const { CLOUD_NAME, CLOUD_API_KEY, CLOUD_API_SECRET, NODE_ENV } = process.env;
+const { CLOUD_NAME, CLOUD_API_KEY, CLOUD_API_SECRET, NODE_ENV, CORS_DOMAIN_LIST } = process.env;
 cloudinary.config({
     cloud_name: String(CLOUD_NAME),
     api_key: String(CLOUD_API_KEY),
@@ -30,7 +30,7 @@ cloudinary.config({
 
 connectDatabase();
 
-const origin = NODE_ENV === "development" ? "http://localhost:6600" : "https://articles-gold.vercel.app";
+const origin = NODE_ENV === "development" ? "http://localhost:6600" : CORS_DOMAIN_LIST;
 const app = express();
 app.use(cors({ origin }))
 
